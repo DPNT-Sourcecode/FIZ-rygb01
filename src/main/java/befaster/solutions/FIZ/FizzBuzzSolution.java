@@ -37,15 +37,21 @@ public class FizzBuzzSolution {
      * @return
      */
     private boolean isDivisibleOrContainsDigit(Integer number, Integer digit) {
+        if (isDivisible(number, digit) || isDigitPresent(number, digit)) return true;
+        return false;
+    }
 
+    private boolean isDivisible(Integer number, Integer digit) {
         if (number % digit == 0) {
             return true;
         }
-        else {
-            String numAsText = Integer.toString(number);
-            if (numAsText.contains(Integer.toString(digit))) {
-                return true;
-            }
+        return false;
+    }
+
+    private boolean isDigitPresent(Integer number, Integer digit) {
+        String numAsText = Integer.toString(number);
+        if (numAsText.contains(Integer.toString(digit))) {
+            return true;
         }
         return false;
     }
