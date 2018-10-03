@@ -2,31 +2,34 @@ package befaster.solutions.FIZ;
 
 import befaster.runner.SolutionNotImplementedException;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.stream.IntStream;
 
 public class FizzBuzzSolution {
 
     public String fizzBuzz(Integer number) {
-        StringBuilder sb = new StringBuilder();
+        List<String> resultText = new ArrayList<String>();
         if (isFizz(number)) {
-            sb.append("fizz");
+            resultText.add("fizz");
         }
-        if ((isFizz(number)) && (isBuzz(number)) ){
-            sb.append(" ");
-        }
+//        if ((isFizz(number)) && (isBuzz(number)) ){
+//            resultText.append(" ");
+//        }
         if (isBuzz(number)) {
-            sb.append("buzz");
+            resultText.add("buzz");
         }
-        if (((isFizz(number)) || (isBuzz(number)) ) && (isDeluxe(number))) {
-            sb.append(" ");
-        }
+//        if (((isFizz(number)) || (isBuzz(number)) ) && (isDeluxe(number))) {
+//            resultText.append(" ");
+//        }
         if (isDeluxe(number)) {
-            sb.append("deluxe");
+            resultText.add("deluxe");
         }
-        if (!(isFizz(number)) && !(isBuzz(number)) ){
-            sb.append(number);
+        if (!(isFizz(number)) && !(isBuzz(number)) && !(isDeluxe(number))){
+            String numAsText = Integer.toString(number);
+            resultText.add(new String(numAsText));
         }
-        return sb.toString();
+        return String.join(" ", resultText);
 
     }
 
