@@ -24,12 +24,18 @@ public class FizzBuzzSolutionTest {
     public void compute_fiz3() {
         assertThat(fiz.fizzBuzz(3), equalTo("fizz"));
     }
-
+    @Test
+    public void compute_fiz4() {
+        assertThat(fiz.fizzBuzz(4), equalTo("4"));
+    }
     @Test
     public void compute_fiz5() {
         assertThat(fiz.fizzBuzz(5), equalTo("buzz"));
     }
-
+    @Test
+    public void compute_fiz13() {
+        assertThat(fiz.fizzBuzz(13), equalTo("fizz"));
+    }
     @Test
     public void compute_fiz15() {
         assertThat(fiz.fizzBuzz(15), equalTo("fizz buzz"));

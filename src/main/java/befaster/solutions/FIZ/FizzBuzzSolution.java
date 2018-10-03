@@ -6,20 +6,47 @@ public class FizzBuzzSolution {
 
     public String fizzBuzz(Integer number) {
         StringBuilder sb = new StringBuilder();
-        if (number % 3 == 0) {
+        if (isFizz(number)) {
             sb.append("fizz");
         }
-        if (number % 15 == 0) {
+        if ((isFizz(number)) && (isBuzz(number)) ){
             sb.append(" ");
         }
-        if (number % 5 == 0) {
+        if (isBuzz(number)) {
             sb.append("buzz");
         }
-        if ((number % 3 != 0) && (number % 5 != 0)) {
+        if (!(isFizz(number)) && !(isBuzz(number)) ){
             sb.append(number);
         }
         return sb.toString();
 
     }
 
+    /**
+     * can do both fizz and buzz tests here
+     * @param number
+     * @param digit
+     * @return
+     */
+    private boolean isDivisibleOrContainsDigit(Integer number, Integer digit) {
+
+        if (number % digit == 0) {
+            return true;
+        }
+        else {
+            String numAsText = Integer.toString(number);
+            if (numAsText.contains(Integer.toString(digit))) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    private boolean isFizz(Integer number) {
+       return isDivisibleOrContainsDigit(number,3);
+    }
+
+    private boolean isBuzz(Integer number) {
+        return isDivisibleOrContainsDigit(number,5);
+    }
 }
