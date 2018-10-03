@@ -22,7 +22,7 @@ public class FizzBuzzSolutionTest {
 
     @Test
     public void compute_fiz3() {
-        assertThat(fiz.fizzBuzz(3), equalTo("fizz"));
+        assertThat(fiz.fizzBuzz(3), equalTo("fizz fake deluxe" ));
     }
     @Test
     public void compute_fiz4() {
@@ -30,11 +30,11 @@ public class FizzBuzzSolutionTest {
     }
     @Test
     public void compute_fiz5() {
-        assertThat(fiz.fizzBuzz(5), equalTo("buzz"));
+        assertThat(fiz.fizzBuzz(5), equalTo("buzz fake deluxe"));
     }
     @Test
     public void compute_fiz11() {
-        assertThat(fiz.fizzBuzz(11), equalTo("fake deluxe"));
+        assertThat(fiz.fizzBuzz(11), equalTo("11"));
     }
 
     @Test
@@ -43,7 +43,7 @@ public class FizzBuzzSolutionTest {
     }
     @Test
     public void compute_fiz15() {
-        assertThat(fiz.fizzBuzz(15), equalTo("fizz buzz"));
+        assertThat(fiz.fizzBuzz(15), equalTo("fizz buzz fake deluxe"));
     }
 
     @Test
@@ -53,7 +53,7 @@ public class FizzBuzzSolutionTest {
 
     @Test
     public void compute_fiz111() {
-        assertThat(fiz.fizzBuzz(111), equalTo("fizz fake deluxe"));
+        assertThat(fiz.fizzBuzz(111), equalTo("fizz"));
     }
 
     @Test
@@ -63,6 +63,6 @@ public class FizzBuzzSolutionTest {
 
     @Test
     public void compute_fiz666() {
-        assertThat(fiz.fizzBuzz(666), equalTo("fizz deluxe"));
+        assertThat(fiz.fizzBuzz(666), equalTo("fizz"));
     }
 }

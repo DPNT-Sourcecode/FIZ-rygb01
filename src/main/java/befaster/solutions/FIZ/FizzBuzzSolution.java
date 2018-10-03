@@ -75,7 +75,7 @@ public class FizzBuzzSolution {
     }
 
     private boolean isDeluxe(Integer number) {
-        if (isDivisibleAndContainsDigit(number, 3) || isDivisibleAndContainsDigit(number, 3)) {
+        if (isDivisibleAndContainsDigit(number, 3) || isDivisibleAndContainsDigit(number, 5)) {
             return true;
         }
         return false;
