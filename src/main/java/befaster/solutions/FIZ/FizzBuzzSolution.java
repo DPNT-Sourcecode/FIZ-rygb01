@@ -17,6 +17,9 @@ public class FizzBuzzSolution {
             resultText.add("buzz");
         }
         if (isDeluxe(number)) {
+            if (isFake(number)) {
+                resultText.add("fake");
+            }
             resultText.add("deluxe");
         }
         if (!(isFizz(number)) && !(isBuzz(number)) && !(isDeluxe(number))){
@@ -55,6 +58,9 @@ public class FizzBuzzSolution {
         return isDivisibleOrContainsDigit(number,5);
     }
 
+    private boolean isFake(Integer number) {
+        return (number % 2) != 0;
+    }
 
     private boolean isDeluxe(Integer number) {
 
