@@ -22,7 +22,7 @@ public class FizzBuzzSolution {
             }
             resultText.add("deluxe");
         }
-        if (!(isFizz(number)) && !(isBuzz(number)) && !(isDeluxe(number))){
+        if (!(isFizz(number)) && !(isBuzz(number)) && !(isDeluxe(number))) {
             String numAsText = Integer.toString(number);
             resultText.add(new String(numAsText));
         }
@@ -32,12 +32,18 @@ public class FizzBuzzSolution {
 
     /**
      * can do both fizz and buzz tests here
+     *
      * @param number
      * @param digit
      * @return
      */
     private boolean isDivisibleOrContainsDigit(Integer number, Integer digit) {
         if (isDivisible(number, digit) || isDigitPresent(number, digit)) return true;
+        return false;
+    }
+
+    private boolean isDivisibleAndContainsDigit(Integer number, Integer digit) {
+        if (isDivisible(number, digit) && isDigitPresent(number, digit)) return true;
         return false;
     }
 
@@ -57,11 +63,11 @@ public class FizzBuzzSolution {
     }
 
     private boolean isFizz(Integer number) {
-       return isDivisibleOrContainsDigit(number,3);
+        return isDivisibleOrContainsDigit(number, 3);
     }
 
     private boolean isBuzz(Integer number) {
-        return isDivisibleOrContainsDigit(number,5);
+        return isDivisibleOrContainsDigit(number, 5);
     }
 
     private boolean isFake(Integer number) {
@@ -69,15 +75,8 @@ public class FizzBuzzSolution {
     }
 
     private boolean isDeluxe(Integer number) {
-
-        if (number < 10) {
-            return false;
-        }
-        else {
-            String numAsText = Integer.toString(number);
-            if (numAsText.chars().distinct().count() == 1) {
-                return true;
-            }
+        if (isDivisibleAndContainsDigit(number, 3) || isDivisibleAndContainsDigit(number, 3)) {
+            return true;
         }
         return false;
     }
