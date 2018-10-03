@@ -17,6 +17,12 @@ public class FizzBuzzSolution {
         if (isBuzz(number)) {
             sb.append("buzz");
         }
+        if (((isFizz(number)) || (isBuzz(number)) ) && (isDeluxe(number))) {
+            sb.append(" ");
+        }
+        if (isDeluxe(number)) {
+            sb.append("deluxe");
+        }
         if (!(isFizz(number)) && !(isBuzz(number)) ){
             sb.append(number);
         }
