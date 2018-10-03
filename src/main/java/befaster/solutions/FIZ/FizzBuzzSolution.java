@@ -12,9 +12,11 @@ public class FizzBuzzSolution {
         if (number % 15 == 0) {
             sb.append(" ");
         }
-
         if (number % 5 == 0) {
             sb.append("buzz");
+        }
+        if ((number % 3 != 0) && (number % 5 != 0)) {
+            sb.append(number);
         }
         return sb.toString();
 
