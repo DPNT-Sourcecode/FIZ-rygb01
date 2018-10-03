@@ -13,15 +13,9 @@ public class FizzBuzzSolution {
         if (isFizz(number)) {
             resultText.add("fizz");
         }
-//        if ((isFizz(number)) && (isBuzz(number)) ){
-//            resultText.append(" ");
-//        }
         if (isBuzz(number)) {
             resultText.add("buzz");
         }
-//        if (((isFizz(number)) || (isBuzz(number)) ) && (isDeluxe(number))) {
-//            resultText.append(" ");
-//        }
         if (isDeluxe(number)) {
             resultText.add("deluxe");
         }
