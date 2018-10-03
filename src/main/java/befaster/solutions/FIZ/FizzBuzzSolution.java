@@ -2,6 +2,8 @@ package befaster.solutions.FIZ;
 
 import befaster.runner.SolutionNotImplementedException;
 
+import java.util.stream.IntStream;
+
 public class FizzBuzzSolution {
 
     public String fizzBuzz(Integer number) {
@@ -49,4 +51,20 @@ public class FizzBuzzSolution {
     private boolean isBuzz(Integer number) {
         return isDivisibleOrContainsDigit(number,5);
     }
+
+
+    private boolean isDeluxe(Integer number) {
+
+        if (number < 10) {
+            return false;
+        }
+        else {
+            String numAsText = Integer.toString(number);
+            if (numAsText.chars().distinct().count() == 1) {
+                return true;
+            }
+        }
+        return false;
+    }
+
 }
